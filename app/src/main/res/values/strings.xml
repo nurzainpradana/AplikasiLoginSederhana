@@ -3,4 +3,6 @@
     <string name="masukkan_username_text">Masukkan Username</string>
     <string name="masukkan_password_text">Masukkan Password</string>
     <string name="sign_in_text">Sign In</string>
+    <string name="show_password_text">Show Password</string>
+    <string name="login_text">Login</string>
 </resources>
