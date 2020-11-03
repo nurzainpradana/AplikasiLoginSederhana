@@ -2,6 +2,7 @@ package com.example.android.aplikasiloginsederhana
 
 import android.os.Bundle
 import android.text.InputType.*
+import android.view.Gravity
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -27,12 +28,25 @@ class MainActivity : AppCompatActivity() {
             val dummyPassword = "zain123"
 
             if (username.equals(dummyUsername)){
-                if (password.equals(dummyPassword))
-                    Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                else
-                    Toast.makeText(this, "Password anda Salah", Toast.LENGTH_SHORT).show()
-            } else
-                Toast.makeText(this, "Username anda tidak terdaftar", Toast.LENGTH_SHORT).show()
+                if (password.equals(dummyPassword)){
+                    var myToast = Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.CENTER, 0, 500)
+                    myToast.show()
+                }
+                else {
+                    var myToast = Toast.makeText(this, "Password anda Salah", Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.CENTER, 0, 500)
+                    myToast.show()
+                }
+            } else{
+                var myToast = Toast.makeText(this, "Username anda tidak terdaftar", Toast.LENGTH_SHORT)
+                myToast.setGravity(Gravity.CENTER, 0, 500)
+                myToast.show()
+            }
+        } else {
+            var myToast = Toast.makeText(this, "Data Belum Lengkap", Toast.LENGTH_SHORT)
+            myToast.setGravity(Gravity.CENTER, 0, 500)
+            myToast.show()
         }
     }
 
