@@ -31,8 +31,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Proses verifikasi
-        if (username != "" || password != ""){
-            Toast.makeText(this, "TEST", Toast.LENGTH_SHORT)
+        if (username != "" && password != ""){
+            // Cek Username
+            if (username == "zain"){
+                // Cek Password
+                if (password == "zain123"){
+                    Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Password anda salah", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Username anda tidak terdaftar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
