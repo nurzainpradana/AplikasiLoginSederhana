@@ -27,13 +27,12 @@ class MainActivity : AppCompatActivity() {
             val dummyUsername = "zain"
             val dummyPassword = "zain123"
 
-            if (username.equals(dummyUsername)){
-                if (password.equals(dummyPassword)){
+            if (username == dummyUsername){
+                if (password == ""){
                     var myToast = Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT)
                     myToast.setGravity(Gravity.CENTER, 0, 500)
                     myToast.show()
-                }
-                else {
+                } else {
                     var myToast = Toast.makeText(this, "Password anda Salah", Toast.LENGTH_SHORT)
                     myToast.setGravity(Gravity.CENTER, 0, 500)
                     myToast.show()
@@ -61,8 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     fun showHidePassword(view: View) {
         if (cb_show_password.isChecked)
-            et_password.inputType =
-                TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            et_password.inputType = TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
         else
             et_password.inputType = TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD
     }
